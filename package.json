@@ -7,7 +7,15 @@
     "start": "webpack-dev-server",
     "build": "webpack"
   },
-  "author": "getElementByName",
+  "author": {
+    "name": "getElementByName",
+    "email": "korywh@gmail.com",
+    "url": "https://getElementByName.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getElementByName/webpack-simple-project.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "html-webpack-plugin": "^2.29.0",
