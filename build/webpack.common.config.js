@@ -14,6 +14,5 @@ module.exports = {
         filename: "index.html",
         template: "./src/assets/index.html"
       })
-    ],
-    devtool: "source-map"
+    ]
   };
