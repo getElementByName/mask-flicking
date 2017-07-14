@@ -1,0 +1,28 @@
+[{
+    "name": "SEOUL",
+    "markerColor": "#fff",
+    "info": {
+        "img": "seoul.jpg"
+    }
+},
+{
+    "name": "INCHEON",
+    "markerColor": "#fdd",
+     "info":{
+          "img": "incheon.jpg"
+     }
+},
+{
+    "name": "GWANGJU",
+    "markerColor": "#dfd",
+     "info":{
+         "img": "gwangju.jpg"
+     }
+},
+{
+    "name": "BUSAN",
+    "markerColor": "#ddd",
+     "info":{
+         "img": "busan.jpg"
+     }
+}]

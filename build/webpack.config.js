@@ -1,12 +1,12 @@
-var merge = require("webpack-merge");
+const merge = require("webpack-merge");
 
-var webpackCommonConfig = require("./webpack.common.config");
-var webpackDevConfig = require("./webpack.dev.config");
-var webpackProdConfig = require("./webpack.prod.config");
-var webpackTsConfig = require("./webpack.ts.config");
+const webpackCommonConfig = require("./webpack.common.config");
+const webpackDevConfig = require("./webpack.dev.config");
+const webpackProdConfig = require("./webpack.prod.config");
+
 
 module.exports = function(env) {
-  var isDevMode = env && env.dev;
+  const isDevMode = env && env.dev;
 
-  return merge(webpackCommonConfig, isDevMode ? webpackDevConfig : webpackProdConfig, webpackTsConfig);
+  return merge(webpackCommonConfig, isDevMode ? webpackDevConfig : webpackProdConfig);
 };

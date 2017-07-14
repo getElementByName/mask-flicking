@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes">
-    <title>Webpack App</title>
-    <link rel="stylesheet" href="./main.css">
 
-    <!-- 1) Load jQuery -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <!-- 2) Load egjs All-in-one file merged with dependencies(Hammer.js + egjs components) -->
-    <script src="https://naver.github.io/egjs/latest/dist/pkgd/flicking.pkgd.min.js"></script>
-  </head>
-  <body>
-    <div>HELLO WORLD!</div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes">
+  <title>Webpack App</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- 1) Load jQuery -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+
+  <div id="_flicking_root" class="mask_flicking">
+    <div class="_flicking_warp flicking_warp">
+      <!-- panels ---->
+      <div class="panel _panel">
+        <span class="text _name">NAME</span>
+        <div class="marker">
+          <svg height="100" width="100">
+          <circle class="_marker_color" cx="50" cy="49" r="38" stroke="black" stroke-width="3" fill="#000" />
+        </svg>
+        </div>
+      </div>
+    </div>
+    <div class="_masking mask">
+      <img src="./img/loc_frame.png">
+    </div>
+  </div>
+
+
+  <div id="_info_display" class="info_root">
+    <span class="name _info_name"></span>
+    <img class="background_img"/>
+  </div>
+ 
+</body>
+
 </html>

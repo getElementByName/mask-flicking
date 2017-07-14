@@ -1,1 +1,3 @@
-console.log("HELLO!!!");
+import {MaskFlicking} from "./MaskFlicking";
+export {MaskFlicking};
+export default {MaskFlicking};

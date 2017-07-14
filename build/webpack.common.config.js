@@ -1,9 +1,14 @@
-var path = require("path");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+const merge = require("webpack-merge");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpackTsConfig = require("./addon/webpack.ts.config");
+const StyleConfig = require("./addon/webpack.style.config");
 
-module.exports = {
+module.exports = merge({
     entry: {
-      bundle: "./src/index.ts"
+      "js/demo": ["./src/assets/main.scss", "./src/demo.ts"],
+      "js/bundle": "./src/index.ts"
     },
     output: {
       filename: "[name].js",
@@ -12,7 +17,8 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
         filename: "index.html",
-        template: "./src/assets/index.html"
+        template: "./src/assets/index.html",
+        chunks: ['js/demo']
       })
     ]
-  };
+  }, webpackTsConfig, StyleConfig);
